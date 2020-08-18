@@ -29,7 +29,14 @@ chrome.runtime.onMessage.addListener(function (req) {
 
     case "kebab":
       setClipboard(v.kebabCase(req.value));
+      break;
 
+    case "camel":
+      setClipboard(v.camelCase(req.value));
+      break;
+
+    case "pascal":
+      setClipboard(v.chain(req.value).titleCase().replaceAll(' ', ''));
       break;
 
     case "lower":

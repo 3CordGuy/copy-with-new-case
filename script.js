@@ -11,6 +11,34 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.create({
+  id: "pascal",
+  title: "Pascal",
+  parentId: "parent",
+  contexts:["selection"]
+});
+
+chrome.contextMenus.create({
+  id: "camel",
+  title: "Camel",
+  parentId: "parent",
+  contexts:["selection"]
+});
+
+chrome.contextMenus.create({
+  id: "kebab",
+  title: "Kebab",
+  parentId: "parent",
+  contexts:["selection"]
+});
+
+chrome.contextMenus.create({
+  id: "snake",
+  title: "Snake",
+  parentId: "parent",
+  contexts:["selection"]
+});
+
+chrome.contextMenus.create({
   id: "upper",
   title: "Upper",
   parentId: "parent",
@@ -24,7 +52,6 @@ chrome.contextMenus.create({
   contexts:["selection"]
 });
 
-
 chrome.contextMenus.create({
   id: "title",
   title: "Title",
@@ -32,16 +59,4 @@ chrome.contextMenus.create({
   contexts:["selection"]
 });
 
-chrome.contextMenus.create({
-  id: "snake",
-  title: "Snake",
-  parentId: "parent",
-  contexts:["selection"]
-});
 
-chrome.contextMenus.create({
-  id: "kebab",
-  title: "Kebab",
-  parentId: "parent",
-  contexts:["selection"]
-});

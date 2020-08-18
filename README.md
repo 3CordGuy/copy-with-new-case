@@ -6,8 +6,6 @@
 
 ![copy with new case](CWNC.png)
 
-_Only available via manual install at the moment_
-
 ## How to install manually 📦
 
 1. Clone the Repo to a local folder
