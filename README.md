@@ -4,7 +4,7 @@
 
 ### A Simple Chrome Extension to Help You **Copy Selected Browser** **Text** and **Change Its Case** (all at once)
 
-![copy with new case](CWNC.png)
+![copy with new case](cwnc-v1.png)
 
 ## How to install manually 📦
 
