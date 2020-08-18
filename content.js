@@ -1,19 +1,19 @@
 function setClipboard(value) {
-  let copyFrom = document.createElement("textarea");
-  copyFrom.textContent = value;
-  document.body.appendChild(copyFrom);
+  let textarea = document.createElement("textarea");
+  textarea.textContent = value;
+  document.body.appendChild(textarea);
 
-  copyFrom.select();
+  textarea.select();
 
   if (!document.execCommand("copy")) {
     console.error("failed to get clipboard content");
   }
 
-  copyFrom.blur();
-  document.body.removeChild(copyFrom);
+  textarea.blur();
+  document.body.removeChild(textarea);
 }
 
-chrome.runtime.onMessage.addListener(function (req, sender, sendResponse) {
+chrome.runtime.onMessage.addListener(function (req) {
   switch (req.format) {
     case "upper":
       setClipboard(v.upperCase(req.value));

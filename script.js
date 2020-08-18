@@ -1,5 +1,4 @@
 chrome.contextMenus.onClicked.addListener(function (event) {
-  console.log('Context clicked', event.menuItemId, event.selectionText)
   chrome.tabs.query({ active: true, currentWindow: true }, function(tabs){
     chrome.tabs.sendMessage(tabs[0].id, { format: event.menuItemId, value: event.selectionText });
   });
