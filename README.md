@@ -11,7 +11,7 @@ _Only available via manual install at the moment_
 ## How to install manually 📦
 
 1. Clone the Repo to a local folder
-1. Visit Your Chrome Extensions View
+1. Visit Your Chrome/Brave Extensions View `chrome://extensions/` and `brave://extensions/` respectively
 1. Toggle on the Developer Mode
 1. Select Load Unpacked
 1. Choose the cloned repo folder
