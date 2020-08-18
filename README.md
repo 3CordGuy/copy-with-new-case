@@ -8,10 +8,11 @@
 
 ## How to install manually
 
+1. Clone the Repo to a local folder
 1. Visit Your Chrome Extensions View
-2. Toggle on the Developer Mode
-3. Select Load Unpacked
-4. Choose the extension folder
+1. Toggle on the Developer Mode
+1. Select Load Unpacked
+1. Choose the repo folder
 
 ## Works in
 
