@@ -1,0 +1,30 @@
+{
+    "name": "Copy with New Case",
+    "version": "1.0",
+    "description": "Copy Text to Clipboard with a Different Case",
+    "manifest_version": 2,
+    "permissions": [
+        "tabs",
+        "<all_urls>",
+        "contextMenus",
+        "clipboardRead",
+        "clipboardWrite"
+    ],
+    "icons": {
+        "16": "copy-with-new-case-icon-32.png",
+        "48": "copy-with-new-case-icon-64.png",
+        "128": "copy-with-new-case-icon-128.png"
+    },
+    "content_scripts": [
+        {
+          "matches": [
+            "http://*/*", "https://*/*"
+          ],
+          "js": ["voca.js", "content.js"]
+        }
+      ],
+    "background": {
+        "persistent": false,
+        "scripts": ["script.js"]
+      }
+  }
