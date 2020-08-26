@@ -14,36 +14,45 @@ function setClipboard(value) {
 }
 
 chrome.runtime.onMessage.addListener(function (req) {
+  let copyString = req.value;
+
+  if (req.method == "getSelection") {
+    copyString = window.getSelection().toString();
+  }
+
+
   switch (req.format) {
     case "upper":
-      setClipboard(v.upperCase(req.value));
+      copyString = v.upperCase(copyString);
       break;
 
     case "title":
-      setClipboard(v.titleCase(req.value));
+      copyString = v.titleCase(copyString);
       break;
 
     case "snake":
-      setClipboard(v.snakeCase(req.value));
+      copyString = v.snakeCase(copyString);
       break;
 
     case "kebab":
-      setClipboard(v.kebabCase(req.value));
+      copyString = v.kebabCase(copyString);
       break;
 
     case "camel":
-      setClipboard(v.camelCase(req.value));
+      copyString = v.camelCase(copyString);
       break;
 
     case "pascal":
-      setClipboard(v.chain(req.value).titleCase().replaceAll(' ', ''));
+      copyString = v.chain(copyString).titleCase().replaceAll(' ', '');
       break;
 
     case "lower":
-      setClipboard(v.lowerCase(req.value));
+      copyString = v.lowerCase(copyString);
       break;
 
     default:
-      setClipboard(req.value);
+      // noop;
   }
+
+  setClipboard(copyString);
 });

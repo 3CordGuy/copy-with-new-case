@@ -1,13 +1,14 @@
 {
     "name": "Copy with New Case",
-    "version": "1.0",
+    "version": "1.1.0",
     "description": "Copy Text to Clipboard with a Different Case",
     "manifest_version": 2,
     "permissions": [
         "tabs",
         "activeTab",
         "contextMenus",
-        "clipboardWrite"
+        "clipboardWrite",
+        "notifications"
     ],
     "icons": {
         "16": "copy-with-new-case-icon-32.png",
@@ -25,5 +26,67 @@
     "background": {
         "persistent": false,
         "scripts": ["script.js"]
+      },
+    "commands": {
+      "pascal": {
+        "shortcut": {
+          "default": "Alt+Shift+1",
+          "mac": "Alt+Shift+1"
+        },
+        "description": "Copy text with Pascal case",
+        "name": "pascal"
+      },
+      "camel": {
+        "shortcut": {
+          "default": "Alt+Shift+2",
+          "mac": "Alt+Shift+2"
+        },
+        "description": "Copy text with Camel case",
+        "name": "camel"
+      },
+      "kebab": {
+        "suggested_key": {
+          "default": "Alt+Shift+K",
+          "mac": "Alt+Shift+K"
+        },
+        "shortcut": {
+          "default": "Alt+Shift+3",
+          "mac": "Alt+Shift+3"
+        },
+        "description": "Copy text with Kebab case",
+        "name": "kebab"
+      },
+      "snake": {
+        "shortcut": {
+          "default": "Alt+Shift+4",
+          "mac": "Alt+Shift+4"
+        },
+        "description": "Copy text with Snake case",
+        "name": "snake"
+      },
+      "upper": {
+        "shortcut": {
+          "default": "Alt+Shift+5",
+          "mac": "Alt+Shift+5"
+        },
+        "description": "Copy text with Upper case",
+        "name": "upper"
+      },
+      "lower": {
+        "shortcut": {
+          "default": "Alt+Shift+6",
+          "mac": "Alt+Shift+6"
+        },
+        "description": "Copy text with Lower case",
+        "name": "lower"
+      },
+      "title": {
+        "shortcut": {
+          "default": "Alt+Shift+7",
+          "mac": "Alt+Shift+7"
+        },
+        "description": "Copy text with Title case",
+        "name": "title"
       }
+    }
   }
