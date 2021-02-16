@@ -4,8 +4,6 @@
     "description": "Copy Text to Clipboard with a Different Case",
     "manifest_version": 2,
     "permissions": [
-        "tabs",
-        "activeTab",
         "contextMenus",
         "clipboardWrite",
         "notifications"
